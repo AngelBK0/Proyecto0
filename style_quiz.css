@@ -1,0 +1,386 @@
+¡Entendido! Vamos a **arreglar bien el tamaño de letra del menú y del footer** según el dispositivo. Aquí tienes el **CSS completo corregido y adaptado responsivamente**:
+
+---
+
+✅ **Cambios realizados:**
+
+- **Menú:** Aumentado el tamaño de letra en pantallas grandes.
+- **Footer:** Tamaños de fuente reducidos en pantallas pequeñas (tablet y móvil).
+- **Diseño general:** Mantiene estilo visual atractivo y responsivo.
+
+---
+
+### ✅ CSS COMPLETO ACTUALIZADO
+
+```css
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    font-family: 'Montserrat', serif;
+}
+
+/* ===== MAIN ===== */
+main {
+    width: 100%;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgb(3, 3, 3);
+    background-size: cover;
+    background-position: center;
+    padding-top: 60px;
+}
+
+/* ===== NAVBAR ===== */
+.nav-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 1000;
+    padding: 0.5rem 1rem;
+    background-color: black;
+}
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    max-width: 1200px;
+    margin: auto;
+}
+
+.navbar .logo {
+    font-size: 1.6rem;
+    font-weight: bold;
+    color: #fff;
+}
+
+.navbar .nav-links {
+    list-style: none;
+    display: flex;
+    gap: 1.5rem;
+}
+
+.navbar .nav-links li a {
+    font-size: 1.2rem;
+    color: white;
+    text-decoration: none;
+    font-weight: 600;
+    padding: 8px 16px;
+    border: 2px solid transparent;
+    border-radius: 20px;
+    background-color: transparent;
+    transition: all 0.3s ease;
+}
+
+.navbar .nav-links li a:hover {
+    background-color: lightblue;
+    color: black;
+    border-color: white;
+}
+
+.hamburger {
+    display: none;
+    flex-direction: column;
+    cursor: pointer;
+    gap: 5px;
+}
+
+.hamburger span {
+    height: 3px;
+    width: 25px;
+    background-color: white;
+    border-radius: 5px;
+}
+
+/* ===== MEDIA NAVBAR ===== */
+@media (max-width: 768px) {
+    .navbar .nav-links {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: #222;
+        width: 100%;
+        flex-direction: column;
+        align-items: center;
+        display: none;
+    }
+
+    .navbar .nav-links.active {
+        display: flex;
+    }
+
+    .hamburger {
+        display: flex;
+    }
+
+    .navbar .nav-links li a {
+        font-size: 1rem;
+    }
+}
+
+/* ===== QUIZ GAME (SIN CAMBIOS) ===== */
+.game-quiz-container {
+    width: 40rem;
+    height: 30rem;
+    background-color: rgb(211, 211, 211);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 30px;
+}
+
+.game-details-container {
+    width: 80%;
+    height: 4rem;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.game-question-container {
+    width: 80%;
+    height: 8rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 2px solid darkgray;
+    border-radius: 25px;
+    background-color: rgb(246, 239, 239);
+}
+
+.game-question-container h1 {
+    font-size: 1.1rem;
+    text-align: center;
+    padding: 3px;
+}
+
+.game-options-container {
+    width: 80%;
+    height: 12rem;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.game-options-container span {
+    width: 45%;
+    height: 3rem;
+    border: 2px solid darkgray;
+    border-radius: 20px;
+    overflow: hidden;
+}
+
+span label {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    transition: transform 0.3s;
+    font-weight: 600;
+    color: rgb(22, 22, 22);
+}
+
+span label:hover {
+    transform: scale(1.12);
+    color: white;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type=radio]:checked ~ .option {
+    background: paleturquoise;
+}
+
+.next-button-container {
+    width: 50%;
+    height: 3rem;
+    display: flex;
+    justify-content: center;
+}
+
+.next-button-container button {
+    width: 8rem;
+    height: 2rem;
+    border-radius: 10px;
+    background: none;
+    color: rgb(253, 245, 245);
+    font-weight: 600;
+    border: 2px solid gray;
+    background-color: rgba(20, 18, 18, 0.797);
+    cursor: pointer;
+    outline: none;
+}
+
+.next-button-container button:hover {
+    background-color: rgb(143, 93, 93);
+}
+
+/* ===== MODAL (SIN CAMBIOS) ===== */
+.modal-container {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0; top: 0;
+    width: 100%; height: 100%;
+    background-color: rgba(0,0,0,0.4);
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    animation: fadeIn 1.2s ease-in-out;
+}
+
+.modal-content-container {
+    height: 20rem;
+    width: 25rem;
+    background-color: rgb(43, 42, 42);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+    border-radius: 25px;
+}
+
+.modal-content-container h1 {
+    font-size: 1.3rem;
+    color: lightgray;
+    text-align: center;
+}
+
+.grade-details {
+    width: 15rem;
+    height: 10rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.grade-details p {
+    color: white;
+    text-align: center;
+}
+
+.modal-button-container button {
+    width: 10rem;
+    height: 2rem;
+    background: none;
+    outline: none;
+    border: 1px solid rgb(252, 242, 241);
+    color: white;
+    font-size: 1.1rem;
+    cursor: pointer;
+    border-radius: 20px;
+}
+
+.modal-button-container button:hover {
+    background-color: rgb(83, 82, 82);
+}
+
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+/* ===== FOOTER ===== */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 40px 20px;
+    font-family: Arial, sans-serif;
+}
+
+footer .content {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+footer .item {
+    flex: 1 1 200px;
+}
+
+footer .item h3 {
+    font-size: 1.3rem;
+    border-bottom: 2px solid #f39c12;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    color: #f39c12;
+}
+
+footer .item ul {
+    list-style: none;
+    padding: 0;
+}
+
+footer .item ul li {
+    margin: 8px 0;
+}
+
+footer .item ul li a {
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    color: #f0f0f0;
+    transition: color 0.3s;
+}
+
+footer .item ul li a:hover {
+    color: #f39c12;
+}
+
+/* ===== RESPONSIVE ===== */
+@media (max-width: 700px) {
+    .game-quiz-container {
+        width: 90%;
+        height: auto;
+    }
+
+    .game-options-container span {
+        width: 90%;
+        height: 2.5rem;
+    }
+
+    .modal-content-container {
+        width: 90%;
+        height: auto;
+    }
+
+    footer .item h3 {
+        font-size: 1.1rem;
+    }
+
+    footer .item ul li a {
+        font-size: 1rem;
+    }
+}
+
+@media (max-width: 480px) {
+    footer .content {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer .item h3 {
+        font-size: 1rem;
+    }
+
+    footer .item ul li a {
+        font-size: 0.
