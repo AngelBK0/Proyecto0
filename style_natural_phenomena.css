@@ -1,0 +1,225 @@
+/* Estilos Generales */
+body {
+	font-family: 'Arial', sans-serif;
+	background-color: #182C51;
+	color: #fff;
+	overflow-x: hidden; /* Evitar desplazamiento horizontal */
+	height: 100%;
+	margin: 0;
+	padding: 0;
+  }
+  
+  /* TÍTULO DEL CONTENIDO */
+  .titulo {
+	text-align: center;
+	font-size: 2.5em;
+	color: #C7938B;
+	margin-bottom: 1em;
+	text-transform: uppercase;
+	letter-spacing: 2px;
+  }
+  
+  /* CONTENIDO */
+  .contenido {
+	max-width: 900px; /* Limitar el ancho máximo */
+	margin: 0 auto;
+	padding: 2em;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 10px;
+	box-shadow: 0 0 20px rgba(0, 0, 0, 0.3);
+  }
+  
+  /* TEXTO */
+  .texto {
+	font-size: 1.2em;
+	line-height: 1.6;
+	color: #efdbd8;
+	margin-top: 20px;
+  }
+  
+  .texto p {
+	margin-bottom: 1.5em;
+  }
+  
+  .texto strong {
+	color: #C7938B;
+  }
+  
+  /* PARRAFO DE TEXTO */
+  .texto p:nth-child(odd) {
+	background-color: rgba(200, 148, 139, 0.1);
+	padding: 10px;
+	border-radius: 5px;
+  }
+  
+  .texto p:nth-child(even) {
+	background-color: rgba(200, 148, 139, 0.15);
+	padding: 10px;
+	border-radius: 5px;
+	box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  /* AGREGAR ESPACIO ENTRE LOS PÁRRAFOS */
+  .texto p:not(:last-child) {
+	margin-bottom: 1.5em;
+  }
+  
+  /* MENÚ */
+  header {
+	position: absolute;
+	top: 0;
+	width: 100%;
+	background-color: rgba(0, 0, 0, 0.7);
+	z-index: 10;
+  }
+  
+  .menu {
+	display: flex;
+	justify-content: space-between;
+	padding: 1em;
+  }
+  
+  .menu .logo {
+	font-size: 1.5em;
+	color: #C7938B;
+  }
+  
+  .menu ul {
+	list-style: none;
+	display: flex;
+  }
+  
+  .menu li {
+	margin-left: 20px;
+  }
+  
+  .menu a {
+	text-decoration: none;
+	color: #C7938B;
+	font-size: 1.1em;
+	transition: color 0.3s ease;
+  }
+  
+  .menu a:hover {
+	color: #efdbd8;
+  }
+  
+  /* ANIMACIÓN */
+  .moon {
+	background-image: linear-gradient(30deg, darken(#182C51, 4.6%), darken(#182C51, 8.3%));
+	width: 256px;
+	height: 256px;
+	border-radius: 50%;
+	position: relative;
+	animation: cresent 3.2s linear infinite alternate;
+	margin: 0 auto; /* Centrar la luna */
+	display: block;
+  }
+  
+  @keyframes cresent {
+	0% {
+	  transform: translate(-30px, 30px) scale(0.9);
+	  box-shadow: none;
+	}
+	50% {
+	  transform: translate(0px, 0px) scale(1.02);
+	  box-shadow: 0 0 10px rgba(200, 148, 139, 0.8), 0 0 80px 8px #C7938B;
+	  background-color: #efdbd8;
+	}
+	100% {
+	  transform: translate(30px, -30px) scale(0.9);
+	  box-shadow: none;
+	}
+  }
+  
+  /* FOOTER */
+  footer {
+	background-color: #1f2a44;
+	padding: 2em 0;
+	width: 100%; /* Asegura que el footer ocupe el ancho completo */
+	position: relative;
+	bottom: 0;
+  }
+  
+  footer .content {
+	display: flex;
+	flex-wrap: wrap; /* Permite que los elementos en el footer se ajusten mejor */
+	justify-content: space-around;
+	gap: 20px; /* Espacio entre los elementos */
+  }
+  
+  footer .item ul {
+	list-style: none;
+  }
+  
+  footer .item ul li {
+	margin-bottom: 10px;
+  }
+  
+  footer .item ul li a {
+	text-decoration: none;
+	color: #C7938B;
+	font-size: 1.1em;
+	transition: color 0.3s ease;
+  }
+  
+  footer .item ul li a:hover {
+	color: #efdbd8;
+  }
+  
+  footer .item h3 {
+	color: #C7938B;
+	margin-bottom: 15px;
+  }
+  
+  footer textarea,
+  footer input {
+	width: 100%;
+	padding: 10px;
+	margin-bottom: 15px;
+	border: 1px solid #ccc;
+	border-radius: 5px;
+  }
+  
+  footer button {
+	background-color: #C7938B;
+	color: white;
+	padding: 10px 20px;
+	border: none;
+	border-radius: 5px;
+	cursor: pointer;
+	transition: background-color 0.3s ease;
+  }
+  
+  footer button:hover {
+	background-color: #efdbd8;
+  }
+  
+  /* Media Queries: Ajustar el diseño en pantallas más pequeñas */
+  @media (max-width: 768px) {
+	.menu {
+	  flex-direction: column; /* Hacer el menú vertical en pantallas pequeñas */
+	  align-items: center;
+	}
+  
+	.menu ul {
+	  display: block; /* Los elementos del menú se mostrarán uno debajo del otro */
+	  text-align: center;
+	}
+  
+	.menu li {
+	  margin: 10px 0;
+	}
+  
+	.contenido {
+	  padding: 1em;
+	  width: 100%;
+	  margin-top: 5em;
+	}
+  
+	footer .content {
+	  flex-direction: column;
+	  align-items: center;
+	}
+  }
+  
