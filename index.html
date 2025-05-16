@@ -22,7 +22,7 @@
                 <li><a href="index.html">Home</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
                 <li><a href="techniques.html">Techniques</a></li>
-                <li><a href="grafica.html">About</a></li>
+                <li><a href="about.html">About</a></li>
             </ul>
 
             <!-- Botón menú hamburguesa para móviles -->
@@ -177,40 +177,21 @@
         </div>
     </div>
 
-    <footer>
-        <div class="content">
-            <div class="item">
-                <ul>
-                    <li><a href="index.html#future-jobs">Future Jobs</a></li>
-                    <li><a href="fashion.html">Fashion Article</a></li>
-                    <li><a href="natural.html">Natural Wonders</a></li>
-                    <li><a href="index.html#future-life">Future Life</a></li>
-                </ul>
-            </div>
-            <div class="item">
-                <ul>
-                    <li><a href="habits.html">Healthy Habits</a></li>
-                    <li><a href="natural_phenomena.html">Natural Phenomena</a></li>
-                    <li><a href="quiz.html">Health Quiz</a></li>
-                    <li><a href="hotel.html">Hotel Description</a></li>
-                </ul>
-            </div>
-            <div class="item">
-                <ul>
-                    <li><a href="retro.html">Retro Gadgets</a></li>
-                    <li><a href="techniques.html">Techniques to be Healthy</a></li>
-                    <li><a href="index.html#advertisements">Advertisements</a></li>
-                    <li><a href="about.html">About</a></li> <!-- Corregido "Abaout" -->
-                </ul>
-            </div>
-            <div class="item">
-                <h3>Contact</h3>
-                <textarea rows="10" placeholder="Message"></textarea>
-                <input type="email" placeholder="Email">
-                <button>Send</button>
-            </div>
-        </div>
-    </footer>
+     <!--DIV para insertar el footer -->
+  <div id="footer"></div>
+
+  <!-- script debe ir después del div o dentro de window.onload -->
+  <script>
+    // Esto asegura que el DOM ya está cargado antes de buscar el div
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
+    });
+  </script>
 
     <!-- ===== Carrusel de anuncios ===== -->
     <div class="carousel-slider" id="advertisements">

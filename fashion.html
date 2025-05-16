@@ -26,11 +26,10 @@
           </div>
         </div>
         <ul class="nav__links" id="nav-links">
-          <li><a href="#home">HOME</a></li>
-          <li><a href="#about">ABOUT US</a></li>
-          <li><a href="#service">SERVICE</a></li>
-          <li><a href="#blog">BLOG</a></li>
-          <li><a href="#contact">CONTACT</a></li>
+           <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="grafica.html">About</a></li>
         </ul>
         <div class="nav__btns">
           <button class="btn"><i class="ri-search-line"></i></button>
@@ -225,62 +224,21 @@
       </div>
     </section>
 
-    <footer>
-      <div class="section__container footer__container">
-        <div class="footer__col">
-          <h4>ABOUT</h4>
-          <p class="section__description">
-            Experience the unstoppable power of cutting-edge design and
-            high-performance engineering. Ride with confidence and unleash the
-            thrill of adventure like never before!
-          </p>
-        </div>
-        <div class="footer__col">
-          <h4>SERVICES</h4>
-          <ul class="footer__links">
-            <li><a href="#">Engine Clearing</a></li>
-            <li><a href="#">Full Services</a></li>
-            <li><a href="#">Test Ride Booking</a></li>
-            <li><a href="#">Financing Options</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>OFFICE</h4>
-          <ul class="footer__links">
-            <li><a href="#">About Us</a></li>
-            <li><a href="#">Contact Us</a></li>
-            <li><a href="#">Dealer Locator</a></li>
-            <li><a href="#">Privacy Policy</a></li>
-          </ul>
-        </div>
-        <div class="footer__col">
-          <h4>MODEL</h4>
-          <ul class="footer__links">
-            <li><a href="#">STEED X1</a></li>
-            <li><a href="#">STEED Raptor</a></li>
-            <li><a href="#">STEED TurboMax</a></li>
-            <li><a href="#">STEED Cruiser</a></li>
-          </ul>
-        </div>
-      </div>
-      <div class="section__container footer__bar">
-        <p>Copyright © 2025. All rights reserved.</p>
-        <ul class="footer__socials">
-          <li>
-            <a href="#"><i class="ri-facebook-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-twitter-fill"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-instagram-line"></i></a>
-          </li>
-          <li>
-            <a href="#"><i class="ri-linkedin-fill"></i></a>
-          </li>
-        </ul>
-      </div>
-    </footer>
+     <!--DIV para insertar el footer -->
+  <div id="footer"></div>
+
+  <!-- script debe ir después del div o dentro de window.onload -->
+  <script>
+    // Esto asegura que el DOM ya está cargado antes de buscar el div
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
+    });
+  </script>
 
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>

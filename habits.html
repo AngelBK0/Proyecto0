@@ -10,16 +10,18 @@
 </head>
 <body>
     <header>
-        <div class="nav" id="nav">
-            <div class="logo">
-                <img src="logo.jpg" alt="">
-            </div>
-            <ul>
-                <li>HOME</li>
-                <li>INFO</li>
-                <li>CONTACT</li>
-            </ul>
-        </div>
+<nav class="nav" id="nav">
+    <div class="logo">
+        <img src="logo.jpg" alt="Logo">
+    </div>
+    <ul class="nav-menu">
+               <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="about.html">About</a></li>
+    </ul>
+</nav>
+
         <div class="banner">
             <h1 class="title"> </h1>
             <img src="user.png" alt="">
@@ -83,8 +85,8 @@
 
         <div class="item darkshow">
             <div class="title">
-                <div class="showtotop">autor</div>
-                <div class="showtotop delay-02">Angel</div>
+                <div class="showtotop">title</div>
+                <div class="showtotop delay-02">h2</div>
             </div>
             <div class="content">
                 <div class="img">
@@ -115,19 +117,26 @@
             </div>
         </div>
 
-        <div class="item footer">
-            <div class="title showtotop">Angel</div>
-            <div class="link">
-                <ul>
-                    <li class="showtotop delay-02">HOME</li>
-                    <li class="showtotop delay-04">INFO</li>
-                    <li class="showtotop delay-06">CONTACT</li>
-                    <li class="showtotop delay-08">NEW</li>
-                    <li class="showtotop delay-1">NAMI</li>
-                </ul>
-            </div>
-        </div>
+       
+     <!--DIV para insertar el footer -->
+  <div id="footer"></div>
+
+  <!-- script debe ir después del div o dentro de window.onload -->
+  <script>
+    // Esto asegura que el DOM ya está cargado antes de buscar el div
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
+    });
+  </script>
     </div>
     <script src="script_habits.js"></script>
+
+
+
 </body>
 </html>

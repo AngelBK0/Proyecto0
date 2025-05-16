@@ -321,3 +321,164 @@ animation:showfixed 1s ease-in-out 1 forwards
 .delay-18{
     animation-delay: 1.8s!important;
 }
+
+
+/* FOOTER */
+footer {
+  background-color: #1f2a44;
+  padding: 2em 0;
+  width: 100%; /* Asegura que el footer ocupe el ancho completo */
+  position: relative;
+  bottom: 0;
+}
+
+footer .content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos en el footer se ajusten mejor */
+  justify-content: space-around;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+footer .item ul {
+  list-style: none;
+}
+
+footer .item ul li {
+  margin-bottom: 10px;
+}
+
+footer .item ul li a {
+  text-decoration: none;
+  color: #C7938B;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+footer .item ul li a:hover {
+  color: #efdbd8;
+}
+
+footer .item h3 {
+  color: #C7938B;
+  margin-bottom: 15px;
+}
+
+footer textarea,
+footer input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer button {
+  background-color: #C7938B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #efdbd8;
+}
+
+/* Media Queries: Ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  footer .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}
+
+
+//* MENÚ NAV MODERNO + AJUSTES PERSONALIZADOS */
+.nav {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 80%;
+    padding: 0 10%;
+    border-bottom: 1px solid rgba(115, 114, 114, 0.2);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: rgba(31, 42, 68, 0.9);
+    color: #eee;
+    z-index: 10000;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+}
+
+.nav .logo img {
+    width: 60px;
+    height: auto;
+}
+
+/* Lista de navegación */
+.nav-menu {
+    list-style: none;
+    display: flex;
+    gap: 50px;
+    margin: 0;
+    padding: 0;
+}
+
+.nav-menu li a {
+    text-decoration: none;
+    font-weight: bold;
+    color: #C7938B;
+    padding: 10px 20px;
+    border: 2px solid transparent;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    font-size: 1em;
+}
+
+.nav-menu li a:hover {
+    background-color: #C7938B;
+    color: #fff;
+    border-color: #fff;
+    box-shadow: 0 0 10px #C7938B;
+}
+
+/* Icono hamburguesa */
+.menu-toggle {
+    display: none;
+    font-size: 1.8em;
+    color: #C7938B;
+    cursor: pointer;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-menu {
+        position: absolute;
+        top: 60px;
+        right: 0;
+        background-color: rgba(31, 42, 68, 0.98);
+        flex-direction: column;
+        width: 100%;
+        display: none;
+    }
+
+    .nav-menu li {
+        border-bottom: 1px solid #444;
+        text-align: center;
+    }
+
+    .nav-menu li a {
+        display: block;
+        padding: 15px 0;
+    }
+
+    .nav-menu.show {
+        display: flex;
+    }
+}

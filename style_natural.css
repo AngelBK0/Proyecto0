@@ -301,3 +301,74 @@ a:hover{
         font-size: 14px;
     }
 }
+
+/* FOOTER */
+footer {
+  background-color: #1f2a44;
+  padding: 2em 0;
+  width: 100%; /* Asegura que el footer ocupe el ancho completo */
+  position: relative;
+  bottom: 0;
+}
+
+footer .content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos en el footer se ajusten mejor */
+  justify-content: space-around;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+footer .item ul {
+  list-style: none;
+}
+
+footer .item ul li {
+  margin-bottom: 10px;
+}
+
+footer .item ul li a {
+  text-decoration: none;
+  color: #fbf6f6;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+footer .item ul li a:hover {
+  color: #efdbd8;
+}
+
+footer .item h3 {
+  color: #fffbfa;
+  margin-bottom: 15px;
+}
+
+footer textarea,
+footer input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer button {
+  background-color: #f3eceb;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #efdbd8;
+}
+
+/* Media Queries: Ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  footer .content {
+    flex-direction: column;
+    align-items: center;
+  }
+}

@@ -565,64 +565,6 @@ nav {
   opacity: 0.5;
 }
 
-.footer__container {
-  display: grid;
-  gap: 4rem 2rem;
-}
-
-.footer__col h4 {
-  margin-bottom: 2rem;
-  font-size: 1.25rem;
-  font-weight: 600;
-  font-family: var(--header-font);
-  color: var(--white);
-}
-
-.footer__links {
-  display: grid;
-  gap: 1rem;
-}
-
-.footer__links a {
-  font-size: 1rem;
-  color: var(--text-light);
-}
-
-.footer__links a:hover {
-  color: var(--white);
-}
-
-.footer__bar {
-  padding-block: 1rem;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-direction: column-reverse;
-  gap: 1rem;
-  border-top: 1px solid var(--text-light);
-}
-
-.footer__bar p {
-  font-size: 1rem;
-  color: var(--text-light);
-  text-align: center;
-}
-
-.footer__socials {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 1rem;
-}
-
-.footer__socials a {
-  font-size: 1.2rem;
-  color: var(--text-light);
-}
-
-.footer__socials a:hover {
-  color: var(--white);
-}
 
 @media (width > 540px) {
   .shop__container {
@@ -793,19 +735,6 @@ nav {
     transform-origin: right;
   }
 
-  .footer__container {
-    grid-template-columns: repeat(5, 1fr);
-  }
-
-  .footer__col:nth-child(1) {
-    max-width: 350px;
-    grid-column: 1/3;
-  }
-
-  .footer__bar {
-    flex-direction: row;
-  }
-}
 
 @media (width > 1024px) {
   .nav__links {
@@ -818,5 +747,77 @@ nav {
 
   .shop__card {
     padding: 2rem;
+  }
+}
+
+
+/* FOOTER */
+footer {
+  background-color: #1f2a44;
+  padding: 2em 0;
+  width: 100%; /* Asegura que el footer ocupe el ancho completo */
+  position: relative;
+  bottom: 0;
+}
+
+footer .content {
+  display: flex;
+  flex-wrap: wrap; /* Permite que los elementos en el footer se ajusten mejor */
+  justify-content: space-around;
+  gap: 20px; /* Espacio entre los elementos */
+}
+
+footer .item ul {
+  list-style: none;
+}
+
+footer .item ul li {
+  margin-bottom: 10px;
+}
+
+footer .item ul li a {
+  text-decoration: none;
+  color: #C7938B;
+  font-size: 1.1em;
+  transition: color 0.3s ease;
+}
+
+footer .item ul li a:hover {
+  color: #efdbd8;
+}
+
+footer .item h3 {
+  color: #C7938B;
+  margin-bottom: 15px;
+}
+
+footer textarea,
+footer input {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 15px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+footer button {
+  background-color: #C7938B;
+  color: white;
+  padding: 10px 20px;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #efdbd8;
+}
+
+/* Media Queries: Ajustar el diseño en pantallas más pequeñas */
+@media (max-width: 768px) {
+  footer .content {
+    flex-direction: column;
+    align-items: center;
   }
 }

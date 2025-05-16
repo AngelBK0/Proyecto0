@@ -11,9 +11,10 @@
     <header>
         <div class="logo">Feel Good</div>
         <ul class="menu">
-            <li>Home</li>
-            <li>Blog</li>
-            <li>Info</li>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="quiz.html">Quiz</a></li>
+                <li><a href="techniques.html">Techniques</a></li>
+                <li><a href="about.html">About</a></li>
         </ul>
         <div class="search">
             <svg aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 20 20">
@@ -171,5 +172,21 @@
 
 
     <script src="app.js"></script>
+
+       <!--DIV para insertar el footer -->
+  <div id="footer"></div>
+
+  <!-- script debe ir después del div o dentro de window.onload -->
+  <script>
+    // Esto asegura que el DOM ya está cargado antes de buscar el div
+    window.addEventListener('DOMContentLoaded', () => {
+      fetch('footer.html')
+        .then(response => response.text())
+        .then(data => {
+          document.getElementById('footer').innerHTML = data;
+        })
+        .catch(error => console.error('Error cargando el footer:', error));
+    });
+  </script>
 </body>
 </html>

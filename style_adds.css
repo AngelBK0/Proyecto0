@@ -32,9 +32,18 @@ header{
 }
 header h1{
     font-family: "Karantina", system-ui;
-    font-size: 16vw;
+    font-size: 14vw;
     line-height: 0.8em;
 }
+.highlight-text {
+  font-size: 18px;          /* Tamaño de fuente mayor */
+  font-weight: 600;         /* Peso de fuente semi-negrita */
+  color: #918a88;           /* Color llamativo, puedes cambiarlo */
+  margin-top: 35px;         /* Espacio superior para separar del h1 */
+  letter-spacing: 0.5px;    /* Espaciado entre letras */
+}
+
+
 header .author{
     text-align: right;
     display: flex;
