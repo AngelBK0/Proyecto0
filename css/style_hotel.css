@@ -651,67 +651,84 @@ input {
   }
 }
 
-/* FOOTER */
+/* ========== FOOTER ========== */
 footer {
-  background-color: #1f2a44;
-  padding: 2em 0;
-  width: 100%; /* Asegura que el footer ocupe el ancho completo */
-  position: relative;
-  bottom: 0;
+    background-color: #161924;
+    padding: 80px 20px;
+    color: #eee;
+    font-family: 'Segoe UI', sans-serif;
 }
 
 footer .content {
-  display: flex;
-  flex-wrap: wrap; /* Permite que los elementos en el footer se ajusten mejor */
-  justify-content: space-around;
-  gap: 20px; /* Espacio entre los elementos */
-}
-
-footer .item ul {
-  list-style: none;
-}
-
-footer .item ul li {
-  margin-bottom: 10px;
-}
-
-footer .item ul li a {
-  text-decoration: none;
-  color: #C7938B;
-  font-size: 1.1em;
-  transition: color 0.3s ease;
-}
-
-footer .item ul li a:hover {
-  color: #efdbd8;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 40px;
 }
 
 footer .item h3 {
-  color: #C7938B;
-  margin-bottom: 15px;
+    font-family: 'Lobster', cursive;
+    font-size: 1.8rem;
+    color: #C7938B;
+    margin-bottom: 15px;
 }
 
+footer .item ul {
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+footer .item ul li {
+    margin-bottom: 10px;
+}
+
+footer .item ul li a {
+    color: #f5a3a3; /* Color llamativo */
+    text-decoration: none;
+    font-weight: bold; /* Negritas */
+    transition: all 0.3s ease;
+}
+
+footer .item ul li a:hover {
+    color: #fff;
+    background-color: #C7938B;
+    padding: 4px 8px;
+    border-radius: 6px;
+}
+
+/* Formularios dentro del footer */
 footer textarea,
 footer input {
-  width: 100%;
-  padding: 10px;
-  margin-bottom: 15px;
-  border: 1px solid #ccc;
-  border-radius: 5px;
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    margin-bottom: 15px;
+    background-color: #eee;
+    font-size: 1rem;
 }
 
 footer button {
-  background-color: #C7938B;
-  color: white;
-  padding: 10px 20px;
-  border: none;
-  border-radius: 5px;
-  cursor: pointer;
-  transition: background-color 0.3s ease;
+    width: 100%;
+    padding: 12px 15px;
+    border: none;
+    border-radius: 6px;
+    background-color: #C7938B;
+    color: white;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
 }
 
 footer button:hover {
-  background-color: #efdbd8;
+    background-color: #efdbd8;
+    color: #161924;
+}
+
+footer .content .item:last-child {
+  margin-top: -30px; /* Ajusta este valor a lo que necesites */
 }
 
 /* Media Queries: Ajustar el diseño en pantallas más pequeñas */

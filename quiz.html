@@ -12,9 +12,9 @@
       <nav class="navbar">
         <div class="logo">Health Quiz</div>
         <ul class="nav-links" id="nav-links">
-          <li><a href="#">Inicio</a></li>
-          <li><a href="#">Quiz</a></li>
-          <li><a href="#">Contacto</a></li>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="quiz.html">Quiz</a></li>
+          <li><a href="about.html">About Us</a></li>
         </ul>
         <div class="hamburger" id="hamburger">
           <span></span>
@@ -28,10 +28,7 @@
       <div class="modal-content-container">
         <h1>Congratulations, Quiz Completed.</h1>
         <div class="grade-details">
-          <p>Attempts : 10</p>
-          <p>Wrong Answers : <span id="wrong-answers"></span></p>
-          <p>Right Answers : <span id="right-answers"></span></p>
-          <p>Grade : <span id="grade-percentage"></span>%</p>
+          <p id="final-score-line"></p>
           <p><span id="remarks"></span></p>
         </div>
         <div class="modal-button-container">
@@ -42,7 +39,7 @@
 
     <div class="game-quiz-container">
       <div class="game-details-container">
-        <h1>Score : <span id="player-score"></span> / 10</h1>
+        <h1>Score : <span id="player-score"></span> / 30</h1>
         <h1> Question : <span id="question-number"></span> / 10</h1>
       </div>
 
@@ -79,7 +76,8 @@
       </div>
 
       <div class="next-button-container">
-        <button onclick="handleNextQuestion()">Next Question</button>
+      <button type="button" onclick="handleNextQuestion()">Next Question</button>
+
       </div>
     </div>
   </main>

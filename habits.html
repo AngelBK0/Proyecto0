@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+html<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
@@ -14,6 +14,11 @@
     <div class="logo">
         <img src="logo.jpg" alt="Logo">
     </div>
+ <!-- menú hamburguesa -->
+    <div class="menu-toggle">
+        <i class="fas fa-bars"></i>
+    </div>
+
     <ul class="nav-menu">
                <li><a href="index.html">Home</a></li>
                 <li><a href="quiz.html">Quiz</a></li>
@@ -24,7 +29,7 @@
 
         <div class="banner">
             <h1 class="title"> </h1>
-            <img src="user.png" alt="">
+            <img src="image/user.png" alt="">
         </div>
     </header>
     <div class="container">
@@ -34,6 +39,10 @@
                 <h2 class="showtotop delay-02">Healthy Habits </h2>
                 <div class="text">
                     <p class="showtotop delay-04">Should we take better care of our health?</p>
+                    
+                    <p>
+                        We should discuss feeling good and staying healthy. To have energy, we should do simple things to keep our bodies in shape and help them recover quickly.</p>
+                    
                 </div>
             </div>
         </div>
@@ -85,33 +94,49 @@
 
         <div class="item darkshow">
             <div class="title">
-                <div class="showtotop">title</div>
-                <div class="showtotop delay-02">h2</div>
+                <div class="showtotop">Simple Things You Should Do Every Day</div>
+                <div class="showtotop delay-02"></div>
             </div>
             <div class="content">
                 <div class="img">
-                    <img src="avatar.jp" alt="">
+                    <img src="image/peace.jpg" alt="">
                 </div>
                 <div class="list">
                     <div class="contactItem zoomshow delay-02">
-                            <div class="icon showtotop delay-04"><i class="fa-brands fa-facebook"></i> Facebook</div>
-                            <div class="titleContact showtotop delay-06">titulo</div>
-                            <div class="slug showtotop delay-08" >descripcion</div>
+                            <div class="icon showtotop delay-04"><i class="fa-brands fa-facebook"></i>
+                            #DrinkWaterEveryDay
+                            </div>
+                            <div class="titleContact showtotop delay-06"></div>
+                            <div class="slug showtotop delay-08" >
+                                You should drink water often. Water helps your body stay fresh and clean. It is good for your skin and your health.
+                            </div>
                     </div>
                     <div class="contactItem zoomshow  delay-04">
-                        <div class="icon showtotop delay-06"><i class="fa-brands fa-facebook"></i> Facebook</div>
-                        <div class="titleContact showtotop delay-08">titulo</div>
-                        <div class="slug showtotop delay-1">descripcion</div>
+                        <div class="icon showtotop delay-06"><i class="fa-brands fa-facebook"></i> 
+                        #CleanRoomHappyMind
+                        </div>
+                        <div class="titleContact showtotop delay-08"></div>
+                        <div class="slug showtotop delay-1">
+                            You should keep your room clean. A clean place makes you feel calm and happy. It is easier to find things when your space is tidy.
+                        </div>
                 </div>
                 <div class="contactItem zoomshow  delay-06">
-                    <div class="icon showtotop delay-08"><i class="fa-brands fa-facebook"></i> Facebook</div>
-                    <div class="titleContact showtotop delay-1">titulo</div>
-                    <div class="slug showtotop delay-12">descripcion</div>
+                    <div class="icon showtotop delay-08"><i class="fa-brands fa-facebook"></i>
+                    #ComfortIsImportant
+                    </div>
+                    <div class="titleContact showtotop delay-1"></div>
+                    <div class="slug showtotop delay-12">
+                      You should wear comfortable clothes. When you feel good in your clothes, you can move and work better.  
+                    </div>
             </div>
             <div class="contactItem zoomshow  delay-08">
-                <div class="icon showtotop delay-1"><i class="fa-brands fa-facebook"></i> Facebook</div>
-                <div class="titleContact showtotop delay-12">titulo</div>
-                <div class="slug showtotop delay-14">descripcion</div>
+                <div class="icon showtotop delay-1"><i class="fa-brands fa-facebook"></i> 
+                #BeKindBeHappy
+                </div>
+                <div class="titleContact showtotop delay-12"></div>
+                <div class="slug showtotop delay-14">
+                    You should smile and be kind to others. Being friendly makes your day better and helps you make friends.
+                </div>
         </div>
                 </div>
             </div>
@@ -121,9 +146,9 @@
      <!--DIV para insertar el footer -->
   <div id="footer"></div>
 
-  <!-- script debe ir después del div o dentro de window.onload -->
+
   <script>
-    // Esto asegura que el DOM ya está cargado antes de buscar el div
+    // Doom cargado
     window.addEventListener('DOMContentLoaded', () => {
       fetch('footer.html')
         .then(response => response.text())

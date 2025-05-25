@@ -1,18 +1,3 @@
-¡Entendido! Vamos a **arreglar bien el tamaño de letra del menú y del footer** según el dispositivo. Aquí tienes el **CSS completo corregido y adaptado responsivamente**:
-
----
-
-✅ **Cambios realizados:**
-
-- **Menú:** Aumentado el tamaño de letra en pantallas grandes.
-- **Footer:** Tamaños de fuente reducidos en pantallas pequeñas (tablet y móvil).
-- **Diseño general:** Mantiene estilo visual atractivo y responsivo.
-
----
-
-### ✅ CSS COMPLETO ACTUALIZADO
-
-```css
 * {
     margin: 0;
     padding: 0;
@@ -31,7 +16,7 @@ main {
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: rgb(3, 3, 3);
+    background-color: rgb(240, 235, 235);
     background-size: cover;
     background-position: center;
     padding-top: 60px;
@@ -44,7 +29,7 @@ main {
     left: 0;
     width: 100%;
     z-index: 1000;
-    padding: 0.5rem 1rem;
+    padding: 1rem 1rem;
     background-color: black;
 }
 
@@ -63,6 +48,7 @@ main {
     color: #fff;
 }
 
+/* Aquí ajusto solo el tamaño de letra de los links para desktop */
 .navbar .nav-links {
     list-style: none;
     display: flex;
@@ -70,7 +56,7 @@ main {
 }
 
 .navbar .nav-links li a {
-    font-size: 1.2rem;
+    font-size: 1.3rem; /* letra un poco más grande para desktop */
     color: white;
     text-decoration: none;
     font-weight: 600;
@@ -122,10 +108,32 @@ main {
         display: flex;
     }
 
+    /* Tamaño letra más pequeño en móviles */
     .navbar .nav-links li a {
         font-size: 1rem;
     }
 }
+
+/* Texto del puntaje: grande, negrita, color llamativo */
+.highlight-score {
+    font-size: 2.2rem;
+    font-weight: 900;
+    color: #e63946; /* rojo fuerte */
+    text-shadow: 2px 2px 5px rgba(0,0,0,0.3);
+    margin-bottom: 0.5rem;
+    font-family: 'Poppins', sans-serif;
+}
+
+/* Comentario debajo del puntaje, estilo "cool" */
+.highlight-remark {
+    font-size: 1.8rem;
+    font-weight: 700;
+    color: #457b9d; /* azul bonito */
+    font-style: italic;
+    text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
 
 /* ===== QUIZ GAME (SIN CAMBIOS) ===== */
 .game-quiz-container {
@@ -227,7 +235,8 @@ input[type=radio]:checked ~ .option {
 }
 
 .next-button-container button:hover {
-    background-color: rgb(143, 93, 93);
+    background-color: rgb(27, 244, 99);
+    color: rgb(22, 21, 21);
 }
 
 /* ===== MODAL (SIN CAMBIOS) ===== */
@@ -364,11 +373,11 @@ footer .item ul li a:hover {
     }
 
     footer .item h3 {
-        font-size: 1.1rem;
+        font-size: 1.1rem; /* footer h3 más chico en tablets */
     }
 
     footer .item ul li a {
-        font-size: 1rem;
+        font-size: 1rem; /* footer links más chico en tablets */
     }
 }
 
@@ -379,8 +388,10 @@ footer .item ul li a:hover {
     }
 
     footer .item h3 {
-        font-size: 1rem;
+        font-size: 1rem; /* footer h3 más chico en móviles */
     }
 
     footer .item ul li a {
-        font-size: 0.
+        font-size: 0.9rem; /* footer links más chico en móviles */
+    }
+}

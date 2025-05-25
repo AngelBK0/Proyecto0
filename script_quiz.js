@@ -1,262 +1,179 @@
 const questions = [
     {
         question: "Do you eat vegetables every day?",
-        optionA: "Yes, I eat them at every meal.",
-        optionB: "No",
-        optionC: "5 days",
-        optionD: "7 days",
-        correctOption: "optionD"
+        optionA: "Yes, I eat them at every meal.", // 3 pts
+        optionB: "I eat them almost every day.",                // 2 pts
+        optionC: "I eat them sometimes.",                        // 1 pt
+        optionD: "No, I don't eat vegetables.",                            // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
         question: "How often do you exercise?",
-        optionA: "I exercise every day.",
-        optionB: "I exercise 3-4 times a week.",
-        optionC: "I exercise once a week.",
-        optionD: "I don’t exercise at all.",
-        correctOption: "optionA"
+        optionA: "I exercise every day.",            // 3 pts
+        optionB: "3-4 times a week.",                 // 2 pts
+        optionC: "Once a week.",                       // 1 pt
+        optionD: "I don’t exercise at all.",          // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "How many hours do you sleep each night?",
-        optionA: "7-8 hours",
-        optionB: "6-7 hours",
-        optionC: "4-6 hours",
-        optionD: "Less than 4 hours",
-        correctOption: "optionA"
+        question: "How many hours do you sleep each night?",
+        optionA: "I sleep 7 to 8 hours.",          // 3 pts
+        optionB: "I sleep 6 to 7 hours.",          // 2 pts
+        optionC: "I sleep 4 to 6 hours.",          // 1 pt
+        optionD: "I sleep less than 4 hours.",  // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "What do you drink more often?",
-        optionA: "I drink water all the time.",
-        optionB: "I drink soda mostly.",
-        optionC: "I drink coffee every day.",
-        optionD: "I drink tea every day.",
-        correctOption: "optionA"
+        question: "What do you drink more often?",
+        optionA: "I drink water all the time.",    // 3 pts
+        optionB: "I drink tea every day.",         // 2 pts
+        optionC: "I drink coffee every day.",      // 1 pt
+        optionD: "I drink soda most of the time.",           // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "Do you take breaks during the day?",
-        optionA: "Yes, I take regular breaks to relax or stretch.",
-        optionB: "I take breaks only when I’m tired.",
-        optionC: "I never take breaks.",
-        optionD: "I take a break when I feel like it.",
-        correctOption: "optionA"
+        question: "Do you take breaks during the day?",
+        optionA: "Yes, I take regular breaks.",       // 3 pts
+        optionB: "I take breaks when I feel like it.",// 2 pts
+        optionC: "Only when I’m tired.",              // 1 pt
+        optionD: "I never take breaks.",              // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "How often do you eat fast food?",
-        optionA: "Never",
-        optionB: "Once or twice a month",
-        optionC: "1-2 times a week",
-        optionD: "Almost every day",
-        correctOption: "optionA"
+        question: "How often do you eat fast food?",
+        optionA: "I never eat fast food.",                  // 3 pts
+        optionB: "I eat fast food once or twice a month.",  // 2 pts
+        optionC: "I eat fast food once a week.",            // 1 pt
+        optionD: "I eat fast food almost every day.",       // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "Do you eat sugary snacks or drinks?",
-        optionA: "I avoid them completely.",
-        optionB: "I eat them occasionally.",
-        optionC: "I eat sugary snacks sometimes.",
-        optionD: "I eat sugary snacks every day.",
-        correctOption: "optionA"
+        question: "Do you eat sugary snacks or drinks?",
+        optionA: "I avoid them completely.",    // 3 pts
+        optionB: "I eat them occasionally.",    // 2 pts
+        optionC: "I eat them sometimes.",                  // 1 pt
+        optionD: "I eat them every day.",                  // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "How do you manage stress?",
-        optionA: "I use relaxation techniques like meditation or deep breathing.",
-        optionB: "I manage stress okay, but sometimes it’s hard.",
-        optionC: "I get stressed often, but I try to relax.",
-        optionD: "I feel stressed all the time.",
-        correctOption: "optionA"
+        question: "How do you manage stress?",
+        optionA: "I use meditation or breathing.",    // 3 pts
+        optionB: "I manage okay.",              // 2 pts
+        optionC: "I try to relax.",             // 1 pt
+        optionD: "I feel stressed all the time.", // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "Do you smoke or use tobacco products?",
-        optionA: "No, I don’t smoke or use tobacco.",
-        optionB: "I don’t smoke but sometimes I use tobacco products.",
-        optionC: "I smoke occasionally.",
-        optionD: "Yes, I smoke regularly.",
-        correctOption: "optionA"
+        question: "Do you smoke or use tobacco?",
+        optionA: "I don’t smoke.",                  // 3 pts
+        optionB: "I smoke sometimes.",                  // 2 pts
+        optionC: "I smoke regularly.",               // 1 pt
+        optionD: "I smoke all the time.",                  // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     },
-
     {
-		question: "Do you go for medical check-ups regularly?",
-        optionA: "Yes, I go for check-ups every year.",
-        optionB: "I go for check-ups every 2-3 years.",
-        optionC: "I only go when I feel sick.",
-        optionD: "I don’t go for check-ups at all.",
-        correctOption: "optionA"
-    },
-//12
-    {
-        question: "Random",
-        optionA: "a",
-        optionB: "b",
-        optionC: "c",
-        optionD: "d",
-        correctOption: "optionA"
-    },
-
- 
-]
-
-
-
-let shuffledQuestions = [] // Arreglo vacío para almacenar las preguntas seleccionadas aleatoriamente
-
-function handleQuestions() {
-    // Función para barajar las preguntas y agregar 10 preguntas a shuffledQuestions
-    while (shuffledQuestions.length < 10) { // Solo seleccionamos 10 preguntas
-        const random = questions[Math.floor(Math.random() * questions.length)]
-        if (!shuffledQuestions.includes(random)) {
-            shuffledQuestions.push(random)
-        }
+        question: "Do you go for medical check-ups?",
+        optionA: "I go to the doctor every month.",          // 3 pts
+        optionB: "I go to the doctor every 1-3 years.",     // 2 pts
+        optionC: "I go to the doctor only when I am sick.", // 1 pt
+        optionD: "I never go to the doctor.",                // 0 pts
+        points: { optionA: 3, optionB: 2, optionC: 1, optionD: 0 }
     }
-}
+];
 
-let questionNumber = 1
-let playerScore = 0  
-let wrongAttempt = 0 
-let indexNumber = 0
 
-// Función para mostrar la siguiente pregunta
+let indexNumber = 0;
+let questionNumber = 1;
+let totalScore = 0;
+
 function NextQuestion(index) {
-    handleQuestions()
-    const currentQuestion = shuffledQuestions[index]
-    document.getElementById("question-number").innerHTML = questionNumber
-    document.getElementById("player-score").innerHTML = playerScore
-    document.getElementById("display-question").innerHTML = currentQuestion.question;
-    document.getElementById("option-one-label").innerHTML = currentQuestion.optionA;
-    document.getElementById("option-two-label").innerHTML = currentQuestion.optionB;
-    document.getElementById("option-three-label").innerHTML = currentQuestion.optionC;
-    document.getElementById("option-four-label").innerHTML = currentQuestion.optionD;
+    const currentQuestion = questions[index];
+    document.getElementById("question-number").innerText = questionNumber;
+    document.getElementById("player-score").innerText = totalScore;
+    document.getElementById("display-question").innerText = currentQuestion.question;
+    document.getElementById("option-one-label").innerText = currentQuestion.optionA;
+    document.getElementById("option-two-label").innerText = currentQuestion.optionB;
+    document.getElementById("option-three-label").innerText = currentQuestion.optionC;
+    document.getElementById("option-four-label").innerText = currentQuestion.optionD;
 }
 
-function checkForAnswer() {
-    const currentQuestion = shuffledQuestions[indexNumber] // Obtiene la pregunta actual 
-    const currentQuestionAnswer = currentQuestion.correctOption // Obtiene la respuesta correcta
-    const options = document.getElementsByName("option"); // Obtiene todas las opciones de respuesta
+function handleNextQuestion() {
+    const options = document.getElementsByName("option");
+    let selectedValue = null;
 
-    let correctOption = null
-
-    options.forEach((option) => {
-        if (option.value === currentQuestionAnswer) {
-            correctOption = option.labels[0].id
+    for (let option of options) {
+        if (option.checked) {
+            selectedValue = option.value;
+            break;
         }
-    })
-   
-    // Comprobar si se ha seleccionado una opción
-    if (!options[0].checked && !options[1].checked && !options[2].checked && !options[3].checked) {
-        document.getElementById('option-modal').style.display = "flex"
     }
 
-    // Comprobar si la respuesta seleccionada es correcta
-    options.forEach((option) => {
-        if (option.checked && option.value === currentQuestionAnswer) {
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            playerScore += 10  // Asignamos 10 puntos por una respuesta correcta
-            indexNumber++
-            setTimeout(() => {
-                questionNumber++
-            }, 1000)
-        }
+    if (!selectedValue) {
+        // Mostrar modal de opción no seleccionada
+        document.getElementById('option-modal').style.display = "flex";
+        return;
+    }
 
-        else if (option.checked && option.value !== currentQuestionAnswer) {
-            const wrongLabelId = option.labels[0].id
-            document.getElementById(wrongLabelId).style.backgroundColor = "red"
-            document.getElementById(correctOption).style.backgroundColor = "green"
-            wrongAttempt++
-            indexNumber++
-            setTimeout(() => {
-                questionNumber++
-            }, 1000)
-        }
-    })
+    // Sumar puntos
+    totalScore += questions[indexNumber].points[selectedValue];
+
+    unCheckRadioButtons();
+
+    indexNumber++;
+    questionNumber++;
+
+    if (indexNumber < questions.length) {
+        NextQuestion(indexNumber);
+    } else {
+        handleEndGame();
+    }
 }
 
-// Función para manejar el siguiente paso y la visualización de la siguiente pregunta
-function handleNextQuestion() {
-    checkForAnswer()
-    unCheckRadioButtons()
-    setTimeout(() => {
-        if (indexNumber < 10) { // Solo hay 10 preguntas
-            NextQuestion(indexNumber)
-        }
-        else {
-            handleEndGame()
-        }
-        resetOptionBackground()
-    }, 1000);
-}
-
-// Función para reiniciar el fondo de las opciones
-function resetOptionBackground() {
-    const options = document.getElementsByName("option");
-    options.forEach((option) => {
-        document.getElementById(option.labels[0].id).style.backgroundColor = ""
-    })
-}
-
-// Función para desmarcar las opciones de respuesta
 function unCheckRadioButtons() {
     const options = document.getElementsByName("option");
-    for (let i = 0; i < options.length; i++) {
-        options[i].checked = false;
-    }
+    options.forEach(option => option.checked = false);
 }
 
-// Función para finalizar el juego y mostrar los resultados
 function handleEndGame() {
-    let remark = null
-    let remarkColor = null
+    let remark = '';
+    let remarkColor = '';
 
-    // Verificación de la calificación del jugador y comentarios
-    if (playerScore <= 30) {
-        remark = "Bad Grades, Keep Practicing."
-        remarkColor = "red"
-    }
-    else if (playerScore > 30 && playerScore <= 50) {
-        remark = "Average Grades, You can do better."
-        remarkColor = "orange"
-    }
-    else if (playerScore > 50) {
-        remark = "Excellent, Keep the good work going."
-        remarkColor = "green"
+    if (totalScore >= 21) {
+        remark = "Nice! You're rockin' it 💪";
+        remarkColor = "green";
+    } else if (totalScore >= 11) {
+        remark = "Not bad, but can do better 😉";
+        remarkColor = "orange";
+    } else {
+        remark = "Uh-oh... gotta step it up! 🚀";
+        remarkColor = "red";
     }
 
-    // Mostrar el puntaje y los comentarios
-    const playerGrade = (playerScore / 100) * 100
-    document.getElementById('remarks').innerHTML = remark
-    document.getElementById('remarks').style.color = remarkColor
-    document.getElementById('grade-percentage').innerHTML = playerGrade
-    document.getElementById('wrong-answers').innerHTML = wrongAttempt
-    document.getElementById('right-answers').innerHTML = playerScore
-    document.getElementById('score-modal').style.display = "flex"
+    document.getElementById('remarks').innerText = remark;
+    document.getElementById('remarks').style.color = remarkColor;
+    document.getElementById('final-score-line').innerText = `Your Score: ${totalScore} / 30`;
+    document.getElementById('score-modal').style.display = "flex";
 }
 
-// Función para cerrar el modal de resultados y reiniciar el juego
 function closeScoreModal() {
-    questionNumber = 1
-    playerScore = 0
-    wrongAttempt = 0
-    indexNumber = 0
-    shuffledQuestions = []
-    NextQuestion(indexNumber)
-    document.getElementById('score-modal').style.display = "none"
+    indexNumber = 0;
+    questionNumber = 1;
+    totalScore = 0;
+    NextQuestion(indexNumber);
+    document.getElementById('score-modal').style.display = "none";
 }
 
-// Función para cerrar el modal de advertencia (si no se selecciona ninguna respuesta)
 function closeOptionModal() {
-    document.getElementById('option-modal').style.display = "none"
+    document.getElementById('option-modal').style.display = "none";
 }
 
+// Inicializa primera pregunta
+NextQuestion(indexNumber);
 
-
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.navbar .nav-links');
+// Código para el menú hamburguesa 
+const hamburger = document.getElementById('hamburger');
+const navLinks = document.getElementById('nav-links');
 
 hamburger.addEventListener('click', () => {
-    navLinks.classList.toggle('active');  // Cambiamos la clase 'active' para mostrar/ocultar el menú
+    navLinks.classList.toggle('active');
 });
-
