@@ -341,7 +341,7 @@ input {
 /*--------------about--------*/
 /*--------------wrapper--------*/
 .wrapper {
-  background-image: url("../image/ami.jpg");
+  background-image: url("../image/w1.jpg");
   background-repeat: no-repeat;
   background-size: cover;
   width: 100%;
@@ -421,7 +421,7 @@ input {
 /*--------------room--------*/
 /*--------------wrapper2--------*/
 .wrapper2 {
-  background-image: url("../image/w1.jpg");
+  background-image: url("../image/ami.jpg");
 }
 
 .wrapper2 .text {
@@ -737,4 +737,42 @@ footer .content .item:last-child {
     flex-direction: column;
     align-items: center;
   }
+}
+
+.special-text-box .text {
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 20px;
+  border-radius: 10px;
+  max-width: 400px;
+  color: white;
+  text-shadow: 2px 2px 5px rgba(0,0,0,0.7);
+}
+
+.special-text-box .audio-button {
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 56px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-text-box .audio-button:hover {
+  background: rgba(255, 255, 255, 0.45);
+  color: #000;
+  border-color: #000;
+  transform: scale(1.15);
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
 }

@@ -21,7 +21,7 @@
   <header class="header" id="navigation-menu">
     <div class="container">
       <nav>
-        <a href="#" class="logo"> <img src="image/logo.png" alt=""> </a>
+        <a href="#" class="logo"> <img src="image/logo2.png" alt=""> </a>
 
         <ul class="nav-menu">
           <li><a href="index.html" class="nav-link">Home</a></li>
@@ -61,10 +61,17 @@
   <section class="home" id="home">
     <div class="head_container">
       <div class="box">
-        <div class="text">
-          <h1>Hotel</h1>
-          <p>Are you yearning for a destination where turquoise waters meet emerald landscapes, where ancient traditions thrive amidst breathtaking natural beauty? </p>
-          <button>MORE INFO</button>
+        <div class="box special-text-box">
+      <div class="text">
+        <h1>Hotel</h1>
+        <p>Are you yearning for a destination where turquoise waters meet emerald landscapes, where ancient traditions thrive amidst breathtaking natural beauty?</p>
+            <!-- Audio and Play/Pause Button -->
+            <audio id="hotel-audio" src="audio/track_1.mp3"></audio>
+            <button id="audio-btn" class="audio-button">►</button>
+
+    </div>
+</div>
+
         </div>
       </div>
       <div class="image">
@@ -198,8 +205,8 @@
             <img src="image/r1.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>2000 <span>/per night</span> </p>
+            <h3>Superior Single Rooms</h3>
+            <p> <span>$</span>200 USD<span>/per night</span> </p>
           </div>
         </div>
         <div class="box">
@@ -207,8 +214,8 @@
             <img src="image/r2.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>2000 <span>/per night</span> </p>
+            <h3>Superior Double Rooms</h3>
+            <p> <span>$</span>300 USD <span>/per night</span> </p>
           </div>
         </div>
         <div class="box">
@@ -216,8 +223,8 @@
             <img src="image/r3.jpg" alt="">
           </div>
           <div class="text">
-            <h3>Superior Soble Rooms</h3>
-            <p> <span>$</span>2000 <span>/per night</span> </p>
+            <h3>Superior Single Rooms</h3>
+            <p> <span>$</span>200 USD<span>/per night</span> </p>
           </div>
         </div>
       </div>
@@ -227,7 +234,7 @@
     <div class="container">
       <div class="text">
         <div class="heading">
-          <h5>Host</h5>
+          <!-- <h5>Host</h5> -->
           <h2>what could be more captivating than the warm hospitality of the Floresian people?</h2>
         </div>
 
@@ -250,7 +257,7 @@
     </div>
   </section>
 
-
+<!--  
   <section class="restaurant top" id="restaurant">
     <div class="container flex">
       <div class="left">
@@ -294,6 +301,7 @@
       </div>
     </div>
   </section>
+  -->
   <script>
     var accItem = document.getElementsByClassName('accordionItem');
     var accHD = document.getElementsByClassName('accordionIHeading');
@@ -320,7 +328,7 @@
       <div class="heading_top flex1">
         <div class="heading">
           <h5>WELCOME TO OUR PHOTO GALLERY</h5>
-          <h2>Photo Gallery of Our Hotel</h2>
+          <h2>Find out what our hotel looks like in these photos.</h2>
         </div>
         <div class="button">
           <button class="btn1">VIEW GALLERY</button>
@@ -405,6 +413,8 @@
         .catch(error => console.error('Error cargando el footer:', error));
     });
   </script>
+  <script src="hotel.js"></script>
+
 </body>
 
 </html>
