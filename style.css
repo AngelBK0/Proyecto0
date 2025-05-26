@@ -235,59 +235,7 @@ header h1 {
     padding: 10px;
 }
 
-/* ========== FOOTER ========== */
-footer {
-    background-color: #000;
-    margin-top: 50px;
-    padding: 100px 0;
-}
 
-footer .content {
-    width: 1200px;
-    padding: 20px;
-    max-width: calc(100vw - 40px);
-    margin: auto;
-    display: grid;
-    grid-template-columns: 20% 20% 20% 40%;
-}
-
-footer ul {
-    padding: 0;
-}
-
-footer .content .item li {
-    padding: 10px;
-    list-style: none;
-    font-family: 'Lobster', cursive;
-    color: #fff;
-}
-
-footer h3 {
-    font-family: 'Lobster', cursive;
-}
-
-/* Formulario de contacto */
-footer textarea,
-input {
-    display: block;
-    border: none;
-    width: 100%;
-    background-color: #eee;
-    border-radius: 4px;
-    margin-bottom: 20px;
-    padding: 20px 0px;
-    opacity: 0.8;
-}
-
-footer button {
-    width: 100%;
-    border: none;
-    display: block;
-    padding: 20px 0px;
-    border-radius: 4px;
-    background-color: #C52515;
-    color: #fff;
-}
 
 /* Botón hamburguesa móvil */
 .toggleMenu {

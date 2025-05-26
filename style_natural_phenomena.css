@@ -240,4 +240,41 @@ footer .content .item:last-child {
 	  align-items: center;
 	}
   }
-  
+
+ .special-text-box {
+  position: relative; /* Esto hace que el botón se posicione relativo a este bloque */
+}
+
+.special-text-box .audio-button {
+  position: absolute;
+  top: -150px;               /* Mueve el botón hacia arriba */
+  left: 50%;                /* Ajusta qué tan a la derecha va */
+  transform: translateX(-50%); /* Centra horizontalmente desde ese punto */
+
+  font-size: 1.8rem;
+  font-weight: bold;
+  background: rgba(255, 255, 255, 0.2);
+  color: white;
+  border: 2px solid white;
+  backdrop-filter: blur(8px);
+  border-radius: 50%;
+  width: 60px;
+  height: 60px;
+  cursor: pointer;
+  text-align: center;
+  line-height: 56px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.4);
+  transition: background-color 0.3s ease, color 0.3s ease, transform 0.3s ease, border-color 0.3s ease;
+  user-select: none;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.special-text-box .audio-button:hover {
+  background: rgba(255, 255, 255, 0.45);
+  color: #000;
+  border-color: #000;
+  transform: translateX(-50%) scale(1.15); /* Agrega también translateX aquí */
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.5);
+}

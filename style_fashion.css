@@ -327,7 +327,7 @@ nav {
 
 .about__image::before {
   position: absolute;
-  content: "ABOUT US";
+  content: "";
   top: 0;
   right: 0;
   color: var(--white);
@@ -566,6 +566,129 @@ nav {
 }
 
 
+
+/* ========== FOOTER ========== */
+footer {
+  background-color: #161924;
+  padding: 80px 20px;
+  color: #eee;
+  font-family: 'Segoe UI', sans-serif;
+}
+
+footer .content {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 40px;
+}
+
+footer .item h3 {
+  font-family: 'Lobster', cursive;
+  font-size: 1.8rem;
+  color: #C7938B;
+  margin-bottom: 15px;
+}
+
+footer .item ul {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
+footer .item ul li {
+  margin-bottom: 10px;
+}
+
+footer .item ul li a {
+  color: #f5a3a3;
+  text-decoration: none;
+  font-weight: bold;
+  transition: all 0.3s ease;
+}
+
+footer .item ul li a:hover {
+  color: #fff;
+  background-color: #C7938B;
+  padding: 4px 8px;
+  border-radius: 6px;
+}
+
+footer textarea,
+footer input {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  margin-bottom: 15px;
+  background-color: #eee;
+  font-size: 1rem;
+}
+
+footer button {
+  width: 100%;
+  padding: 12px 15px;
+  border: none;
+  border-radius: 6px;
+  background-color: #C7938B;
+  color: white;
+  font-weight: bold;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+footer button:hover {
+  background-color: #efdbd8;
+  color: #161924;
+}
+
+footer .content .item:last-child {
+  margin-top: -30px;
+}
+
+/* ✅ Media Queries para móviles */
+@media (max-width: 768px) {
+  footer {
+    padding: 50px 15px;
+    text-align: center;
+  }
+
+  footer .content {
+    grid-template-columns: 1fr;
+    gap: 30px;
+  }
+
+  footer .item h3 {
+    font-size: 1.6rem;
+  }
+
+  footer button {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  footer {
+    padding: 40px 10px;
+  }
+
+  footer .item h3 {
+    font-size: 1.4rem;
+  }
+
+  footer .item ul li a {
+    font-size: 0.95rem;
+  }
+
+  footer textarea,
+  footer input,
+  footer button {
+    font-size: 0.95rem;
+  }
+}
+
+
+
 @media (width > 540px) {
   .shop__container {
     grid-template-columns: repeat(2, 1fr);
@@ -747,94 +870,5 @@ nav {
 
   .shop__card {
     padding: 2rem;
-  }
-}
-
-
-/* ========== FOOTER ========== */
-footer {
-    background-color: #161924;
-    padding: 80px 20px;
-    color: #eee;
-    font-family: 'Segoe UI', sans-serif;
-}
-
-footer .content {
-    max-width: 1200px;
-    margin: 0 auto;
-    display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
-    gap: 40px;
-}
-
-footer .item h3 {
-    font-family: 'Lobster', cursive;
-    font-size: 1.8rem;
-    color: #C7938B;
-    margin-bottom: 15px;
-}
-
-footer .item ul {
-    padding: 0;
-    margin: 0;
-    list-style: none;
-}
-
-footer .item ul li {
-    margin-bottom: 10px;
-}
-
-footer .item ul li a {
-    color: #f5a3a3; /* Color llamativo */
-    text-decoration: none;
-    font-weight: bold; /* Negritas */
-    transition: all 0.3s ease;
-}
-
-footer .item ul li a:hover {
-    color: #fff;
-    background-color: #C7938B;
-    padding: 4px 8px;
-    border-radius: 6px;
-}
-
-/* Formularios dentro del footer */
-footer textarea,
-footer input {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 6px;
-    margin-bottom: 15px;
-    background-color: #eee;
-    font-size: 1rem;
-}
-
-footer button {
-    width: 100%;
-    padding: 12px 15px;
-    border: none;
-    border-radius: 6px;
-    background-color: #C7938B;
-    color: white;
-    font-weight: bold;
-    cursor: pointer;
-    transition: background-color 0.3s ease;
-}
-
-footer button:hover {
-    background-color: #efdbd8;
-    color: #161924;
-}
-
-footer .content .item:last-child {
-  margin-top: -30px; /* Ajusta este valor a lo que necesites */
-}
-
-/* Media Queries: Ajustar el diseño en pantallas más pequeñas */
-@media (max-width: 768px) {
-  footer .content {
-    flex-direction: column;
-    align-items: center;
   }
 }
